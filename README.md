@@ -14,7 +14,7 @@ This project is a simple tax calculator web application that allows users to cal
 1. Clone or download the project files to your local machine.
 2. Open the `index.html` file in a web browser.
 3. Fill in the required fields: Gross Annual Income, Extra Income, Age, and Deductions.
-4. Click on the "Calculate Tax" button.
+4. Click on the "Submit" button.
 5. View the tax calculation result in the modal window.
 
 ## Technologies Used
