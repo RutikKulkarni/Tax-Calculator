@@ -91,6 +91,15 @@ Tax-Calculator/
 2. **Test Case 2**: Submit the form with valid input but with an error in the calculation logic.
    - **Expected Result**: Error message displayed indicating calculation error, preventing incorrect tax calculation.
 
+### Screenshots of Test cases
+![Screenshot 2024-04-12 165730](https://github.com/RutikKulkarni/Tax-Calculator/assets/86470947/87ca4739-1edf-45ea-9786-8197ccc393bd)
+![Screenshot 2024-04-12 165739](https://github.com/RutikKulkarni/Tax-Calculator/assets/86470947/a0763b6b-1665-4118-8f50-7e79f6263db6)
+![Screenshot 2024-04-12 165749](https://github.com/RutikKulkarni/Tax-Calculator/assets/86470947/dacfcf95-46f0-4df9-a438-9042f7167912)
+![Screenshot 2024-04-12 165812](https://github.com/RutikKulkarni/Tax-Calculator/assets/86470947/252b5c25-6be6-4815-ae12-6ceeb63ffd4e)
+![Screenshot 2024-04-12 165824](https://github.com/RutikKulkarni/Tax-Calculator/assets/86470947/335b2a80-432a-443a-9cb0-1affeb6522b1)
+![Screenshot 2024-04-12 165849](https://github.com/RutikKulkarni/Tax-Calculator/assets/86470947/a794571c-7e49-4926-906d-9d495e4810c1)
+![Screenshot 2024-04-12 165910](https://github.com/RutikKulkarni/Tax-Calculator/assets/86470947/1f985a8a-31fb-4cbd-8ee4-6c7da6b30d8f)
+
 
 ## Credits
 
