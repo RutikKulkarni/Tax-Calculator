@@ -4,7 +4,7 @@ The Tax Calculator project is a web application designed to help users calculate
 
 ## Live Demo
 
-Check out the live demo of this project [here](https://yourliveurl.com).
+Check out the live demo of this project [here](https://rutikkulkarni.github.io/Tax-Calculator/).
 
 ## Features
 
@@ -60,6 +60,37 @@ Tax-Calculator/
 │   └── script.js
 └── README.md
 ```
+
+## Test Cases
+
+### Input Validation Test Cases
+1. **Test Case 1**: Enter valid values in all input fields and submit the form.
+   - **Expected Result**: Form submits successfully without any error messages.
+2. **Test Case 2**: Enter non-numeric characters in the income field and submit the form.
+   - **Expected Result**: Error message displayed for the income field, preventing form submission.
+3. **Test Case 3**: Leave the age dropdown field empty and submit the form.
+   - **Expected Result**: Error message displayed for the age field, preventing form submission.
+4. **Test Case 4**: Enter negative values in the income and deductions fields and submit the form.
+   - **Expected Result**: Error messages displayed for the income and deductions fields, preventing form submission.
+
+### Age Dropdown Validation Test Cases
+1. **Test Case 1**: Select an age group from the dropdown and submit the form.
+   - **Expected Result**: Form submits successfully without any error messages.
+2. **Test Case 2**: Leave the age dropdown empty and submit the form.
+   - **Expected Result**: Error message displayed for the age field, preventing form submission.
+
+### Calculation Logic Test Cases
+1. **Test Case 1**: Enter income below 8 Lakhs and submit the form.
+   - **Expected Result**: No tax calculated.
+2. **Test Case 2**: Enter income above 8 Lakhs for each age group and submit the form.
+   - **Expected Result**: Tax calculated based on the provided formula and age group.
+
+### Error Handling Test Cases
+1. **Test Case 1**: Submit the form without entering any values.
+   - **Expected Result**: Error messages displayed for all required fields, preventing form submission.
+2. **Test Case 2**: Submit the form with valid input but with an error in the calculation logic.
+   - **Expected Result**: Error message displayed indicating calculation error, preventing incorrect tax calculation.
+
 
 ## Credits
 
