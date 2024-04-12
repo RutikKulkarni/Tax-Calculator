@@ -16,6 +16,16 @@ This project is a simple tax calculator web application that allows users to cal
 - All calculations are based on the provided formula and tax rates.
 - Tooltips provide additional information and explanations.
 
+## Tax Calculation Formula
+
+The tax calculation works based on the following formula:
+
+- Overall income (after deductions) under 8 Lakhs is not taxed.
+- Income over 8 Lakhs is taxed based on the following rates:
+  - 30% for people with age < 40
+  - 40% for people with age >= 40 but < 60
+  - 10% for people with age >= 60
+
 ## How to Use
 
 1. Clone or download the project files to your local machine.
