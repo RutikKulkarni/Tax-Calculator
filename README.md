@@ -4,7 +4,7 @@ The Tax Calculator project is a web application designed to help users calculate
 
 ## Live Demo
 
-Check out the live demo of this project [here](https://rutikkulkarni.github.io/Tax-Calculator/).
+Check out the live demo of this project [https://rutikkulkarni.github.io/Tax-Calculator](https://rutikkulkarni.github.io/Tax-Calculator).
 
 ## Features
 
