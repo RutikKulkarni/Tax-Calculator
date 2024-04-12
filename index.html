@@ -20,7 +20,9 @@
             <div class="col-12 col-md-9 col-lg-7 col-xl-6">
               <div class="card">
                 <div class="card-body p-5">
-                  <h2 class="text-center mb-5">Tax Calculator</h2>
+                  <h2 class="text-center mb-5 text-uppercase">
+                    Tax Calculator
+                  </h2>
 
                   <form id="taxForm" class="center">
                     <div class="mb-3 position-relative">
@@ -28,9 +30,9 @@
                         Enter gross annual income
                         <span
                           class="question-icon"
-                          data-bs-toggle="tooltip"
+                          data-bs-toggle="popover"
                           data-bs-placement="top"
-                          title="Explanation for Gross Annual Income"
+                          data-bs-content="incomePopoverContent"
                         >
                           <ion-icon name="help-circle-outline"></ion-icon>
                         </span>
@@ -39,11 +41,15 @@
                         type="number"
                         class="form-control"
                         id="income"
+                        placeholder="Enter gross annual income"
                         required
                       />
                       <ion-icon
                         name="information-circle-outline"
                         class="info-icon"
+                        data-bs-toggle="popover"
+                        data-bs-placement="top"
+                        data-bs-content="incomeInfoPopoverContent"
                       ></ion-icon>
                       <div class="error-icon" id="incomeError"></div>
                     </div>
@@ -53,9 +59,9 @@
                         Enter extra Income
                         <span
                           class="question-icon"
-                          data-bs-toggle="tooltip"
+                          data-bs-toggle="popover"
                           data-bs-placement="top"
-                          title="Explanation for Gross Annual Income"
+                          data-bs-content="extraIncomePopoverContent"
                         >
                           <ion-icon name="help-circle-outline"></ion-icon>
                         </span>
@@ -64,6 +70,7 @@
                         type="number"
                         class="form-control"
                         id="extraIncome"
+                        placeholder="Enter extra Income from other sources"
                       />
                       <div class="error-icon" id="extraIncomeError"></div>
                     </div>
@@ -72,19 +79,17 @@
                         >Enter age group
                         <span
                           class="question-icon"
-                          data-bs-toggle="tooltip"
+                          data-bs-toggle="popover"
                           data-bs-placement="top"
-                          title="Explanation for Gross Annual Income"
+                          data-bs-content="agePopoverContent"
                         >
                           <ion-icon name="help-circle-outline"></ion-icon>
                         </span>
                       </label>
                       <select class="form-select" id="age" required>
-                        <option value="" selected disabled>
-                          Select Age Group
-                        </option>
-                        <option value="<40">&lt;40</option>
-                        <option value=">=40 <60">&ge;40 &lt;60</option>
+                        <option value="" selected disabled></option>
+                        <option value="< 40">&lt; 40</option>
+                        <option value=">=40 < 60">&ge;40 &lt; 60</option>
                         <option value=">=60">&ge;60</option>
                       </select>
                       <div class="error-icon" id="ageError"></div>
@@ -94,9 +99,9 @@
                         >Enter total applicable deductions
                         <span
                           class="question-icon"
-                          data-bs-toggle="tooltip"
+                          data-bs-toggle="popover"
                           data-bs-placement="top"
-                          title="Explanation for Gross Annual Income"
+                          data-bs-content="deductionsPopoverContent"
                         >
                           <ion-icon name="help-circle-outline"></ion-icon>
                         </span>
@@ -105,6 +110,7 @@
                         type="number"
                         class="form-control"
                         id="deductions"
+                        placeholder="Add total applicable deductions"
                       />
                       <div class="error-icon" id="deductionsError"></div>
                     </div>
@@ -121,32 +127,48 @@
       </div>
     </section>
 
+    <!-- Popover content -->
+    <div class="popover" id="incomeInfoPopoverContent" style="display: none">
+      Please enter numbers only
+    </div>
+
+    <div id="incomePopoverContent" style="display: none">
+      Gross annual income is your total salary in a year before any deductions
+    </div>
+    <div id="extraIncomePopoverContent" style="display: none">
+      Extra income refers to any additional income you receive apart from your
+      salary, such as bonuses, freelance earnings, or investment returns.
+    </div>
+    <div id="agePopoverContent" style="display: none">
+      Age group refers to the age range you belong to. Select the appropriate
+      option based on your age.
+    </div>
+    <div id="deductionsPopoverContent" style="display: none">
+      Total applicable deductions represent any allowable expenses or deductions
+      that can be subtracted from your income before calculating taxes. This
+      could include deductions such as investments, medical expenses, or
+      education expenses.
+    </div>
+
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="resultModal"
-      tabindex="-1"
-      aria-labelledby="resultModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="resultModalLabel">
-              Tax Calculation Result
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p id="resultText"></p>
+    <div class="modal" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center mt-3">
+                    <h5 class="modal-title" id="resultModalLabel">
+                      Your overall income will be
+                    </h5>
+                    <div class="modal-text" id="resultText"></div>
+                    <p class="mb-3">after tax deductions</p>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </div>
 
     <script

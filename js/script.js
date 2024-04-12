@@ -10,14 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const extraIncomeError = document.getElementById("extraIncomeError");
   const deductionsError = document.getElementById("deductionsError");
 
-  // Initialize Bootstrap popovers
-//   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-//   const popoverList = Array.from(popoverTriggerList).map(function (popoverTriggerEl) {
-//     return new bootstrap.Popover(popoverTriggerEl, {
-//       container: 'body' // Specify container to avoid rendering problems
-//     });
-//   });
-
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -48,10 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let tax = 0;
     if (income + extraIncome - deductions > 800000) {
       switch (ageGroup) {
-        case "<40":
+        case "< 40":
           tax = 0.3 * (income + extraIncome - deductions - 800000);
           break;
-        case ">=40 <60":
+        case ">=40 < 60":
           tax = 0.4 * (income + extraIncome - deductions - 800000);
           break;
         case ">=60":
@@ -66,7 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("resultModal")
     );
     const resultText = document.getElementById("resultText");
-    resultText.textContent = `Tax Amount: ${tax.toFixed(2)} Lakhs`;
+    resultText.textContent = `${tax.toFixed(2)}`;
     resultModal.show();
   });
+
+  function initializePopovers() {
+    const popovers = document.querySelectorAll('[data-bs-toggle="popover"]');
+    popovers.forEach((popover) => {
+      const contentId = popover.getAttribute("data-bs-content");
+      const content = document.getElementById(contentId);
+      const bsPopover = new bootstrap.Popover(popover, {
+        content: content.innerHTML,
+        trigger: "hover",
+        placement: "top",
+      });
+    });
+  }
+
+  initializePopovers();
 });
