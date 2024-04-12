@@ -151,24 +151,42 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-                <div class="text-center mt-3">
-                    <h5 class="modal-title" id="resultModalLabel">
-                      Your overall income will be
-                    </h5>
-                    <div class="modal-text" id="resultText"></div>
-                    <p class="mb-3">after tax deductions</p>
-                </div>
-                <div class="text-center mt-3">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+    <div
+      class="modal"
+      id="resultModal"
+      tabindex="-1"
+      aria-labelledby="resultModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="text-center mt-3">
+              <h5 class="modal-title" id="resultModalLabel">
+                Your overall income will be
+              </h5>
+              <div class="modal-text" id="overallIncomeText"></div>
+              <h5>after tax deductions</h5>
+              <br />
+              <div>
+                <div class="mb-3">
+                  <b>Tax amount is </b>
+                  <p class="modal-text" id="resultText"></p>
                 </div>
               </div>
             </div>
+            <div class="text-center mt-3">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
+      </div>
     </div>
 
     <script

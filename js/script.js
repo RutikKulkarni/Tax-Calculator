@@ -54,11 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    const overallIncome = income + extraIncome - tax;
+
     const resultModal = new bootstrap.Modal(
       document.getElementById("resultModal")
     );
     const resultText = document.getElementById("resultText");
+    const overallIncomeText = document.getElementById("overallIncomeText");
+
     resultText.textContent = `${tax.toFixed(2)}`;
+    overallIncomeText.textContent = `${overallIncome.toFixed(2)}`;
+
     resultModal.show();
   });
 
