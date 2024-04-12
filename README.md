@@ -9,6 +9,13 @@ This project is a simple tax calculator web application that allows users to cal
 - Uses Bootstrap for styling and layout
 - Provides tooltips for additional information
 
+### Assumptions
+
+- Users are expected to enter numeric values for income, extra income, and deductions.
+- Age is selected from predefined options: <40, >=40 <60, >=60.
+- All calculations are based on the provided formula and tax rates.
+- Tooltips provide additional information and explanations.
+
 ## How to Use
 
 1. Clone or download the project files to your local machine.
