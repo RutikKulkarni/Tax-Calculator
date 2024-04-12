@@ -10,43 +10,70 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <h1 class="mt-5 text-center">Tax Calculator</h1>
-          <form id="taxForm">
-            <div class="mb-3">
-              <label for="income">Gross Annual Income:</label>
-              <input type="number" class="form-control" id="income" required />
-              <div class="error-icon" id="incomeError"></div>
+    <section class="vh-100">
+      <div class="align-items-center h-100">
+        <div class="container h-100">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card">
+                <div class="card-body p-5">
+                  <h2 class="text-center mb-5">Tax Calculator</h2>
+
+                  <form id="taxForm" class="center">
+                    <div class="mb-3">
+                      <label for="income">Gross Annual Income</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="income"
+                        required
+                      />
+                      <div class="error-icon" id="incomeError"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="extraIncome">Extra Income:</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="extraIncome"
+                      />
+                      <div class="error-icon" id="extraIncomeError"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="age">Age</label>
+                      <select class="form-select" id="age" required>
+                        <option value="" selected disabled>
+                          Select Age Group
+                        </option>
+                        <option value="<40">&lt;40</option>
+                        <option value=">=40 <60">&ge;40 &lt;60</option>
+                        <option value=">=60">&ge;60</option>
+                      </select>
+                      <div class="error-icon" id="ageError"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="deductions">Deductions</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="deductions"
+                      />
+                      <div class="error-icon" id="deductionsError"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="extraIncome">Extra Income:</label>
-              <input type="number" class="form-control" id="extraIncome" />
-              <div class="error-icon" id="extraIncomeError"></div>
-            </div>
-            <div class="mb-3">
-              <label for="age">Age:</label>
-              <select class="form-select" id="age" required>
-                <option value="" selected disabled>Select Age Group</option>
-                <option value="<40">&lt;40</option>
-                <option value=">=40 <60">&ge;40 &lt;60</option>
-                <option value=">=60">&ge;60</option>
-              </select>
-              <div class="error-icon" id="ageError"></div>
-            </div>
-            <div class="mb-3">
-              <label for="deductions">Deductions:</label>
-              <input type="number" class="form-control" id="deductions" />
-              <div class="error-icon" id="deductionsError"></div>
-            </div>
-            <button type="submit" class="btn btn-primary">Calculate Tax</button>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Modal -->
     <div
@@ -81,5 +108,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
