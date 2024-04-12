@@ -8,6 +8,23 @@ body {
   border-radius: 15px;
 }
 
+.label-wrapper {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: semi-bold;
+}
+
+.question-icon {
+  font-size: 18px;
+  margin-left: 5px;
+  margin-bottom: -3px;
+}
+
+.question-icon {
+  cursor: pointer;
+}
+
 .info-icon {
   position: absolute;
   top: 70%;

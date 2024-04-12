@@ -10,6 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const extraIncomeError = document.getElementById("extraIncomeError");
   const deductionsError = document.getElementById("deductionsError");
 
+  // Initialize Bootstrap popovers
+//   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+//   const popoverList = Array.from(popoverTriggerList).map(function (popoverTriggerEl) {
+//     return new bootstrap.Popover(popoverTriggerEl, {
+//       container: 'body' // Specify container to avoid rendering problems
+//     });
+//   });
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 

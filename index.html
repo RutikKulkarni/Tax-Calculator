@@ -23,41 +23,43 @@
                   <h2 class="text-center mb-5">Tax Calculator</h2>
 
                   <form id="taxForm" class="center">
-                    <!-- <div class="mb-3">
-                        <label for="income" style="margin-bottom: 5px; display: flex; align-items: center;">
-                            Gross Annual Income
-                            <span class="question-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Explanation for Gross Annual Income" style="font-size: 18px;">
-                              <ion-icon name="help-circle-outline"></ion-icon>
-                            </span>
-                          </label>
-
+                    <div class="mb-3 position-relative">
+                      <label for="income" class="label-wrapper">
+                        Enter gross annual income
+                        <span
+                          class="question-icon"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Explanation for Gross Annual Income"
+                        >
+                          <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                      </label>
                       <input
                         type="number"
                         class="form-control"
                         id="income"
                         required
                       />
+                      <ion-icon
+                        name="information-circle-outline"
+                        class="info-icon"
+                      ></ion-icon>
                       <div class="error-icon" id="incomeError"></div>
-                    </div> -->
-                    <div class="mb-3 position-relative">
-                        <label for="income" style="margin-bottom: 5px; display: flex; align-items: center;">
-                            Gross Annual Income
-                            <span class="question-icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Explanation for Gross Annual Income" style="font-size: 18px;">
-                                <ion-icon name="help-circle-outline"></ion-icon>
-                            </span>
-                        </label>
-                        <input
-                            type="number"
-                            class="form-control"
-                            id="income"
-                            required
-                        />
-                        <ion-icon name="information-circle-outline" class="info-icon"></ion-icon>
-                        <div class="error-icon" id="incomeError"></div>
                     </div>
-                    
+
                     <div class="mb-3">
-                      <label for="extraIncome">Extra Income</label>
+                      <label for="extraIncome" class="label-wrapper">
+                        Enter extra Income
+                        <span
+                          class="question-icon"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Explanation for Gross Annual Income"
+                        >
+                          <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                      </label>
                       <input
                         type="number"
                         class="form-control"
@@ -66,7 +68,17 @@
                       <div class="error-icon" id="extraIncomeError"></div>
                     </div>
                     <div class="mb-3">
-                      <label for="age">Age</label>
+                      <label for="age" class="label-wrapper"
+                        >Enter age group
+                        <span
+                          class="question-icon"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Explanation for Gross Annual Income"
+                        >
+                          <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                      </label>
                       <select class="form-select" id="age" required>
                         <option value="" selected disabled>
                           Select Age Group
@@ -78,7 +90,17 @@
                       <div class="error-icon" id="ageError"></div>
                     </div>
                     <div class="mb-3">
-                      <label for="deductions">Deductions</label>
+                      <label for="deductions" class="label-wrapper"
+                        >Enter total applicable deductions
+                        <span
+                          class="question-icon"
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="Explanation for Gross Annual Income"
+                        >
+                          <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                      </label>
                       <input
                         type="number"
                         class="form-control"
